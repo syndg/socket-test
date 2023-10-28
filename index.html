@@ -67,7 +67,9 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      const socket = io();
+      const socket = io("https://socket-test-syndg.vercel.app", {
+        transports: ["websocket"],
+      });
       const form = document.getElementById("form");
       const input = document.getElementById("input");
 
